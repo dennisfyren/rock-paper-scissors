@@ -1,3 +1,4 @@
+alert("Press F12 and open console to play!");
 let userInput = prompt("Rock, paper or scissors?");
 
 userInput = userInput.toLowerCase();
