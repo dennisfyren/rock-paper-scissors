@@ -44,5 +44,3 @@ if (userInput === 1 && computerInput === 2) {
 }
 
 location.reload();
-
-console.log(computerInput);
