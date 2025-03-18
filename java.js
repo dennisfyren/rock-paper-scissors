@@ -1,4 +1,3 @@
-alert("Press F12 and open console to play!");
 let userInput = prompt("Rock, paper or scissors?");
 
 userInput = userInput.toLowerCase();
@@ -37,6 +36,10 @@ if (userInput === 1 && computerInput === 2) {
 } else if(userInput === 2 && computerInput === 3) {
     alert("You lose!");
 } else if(userInput === 2 && computerInput === 1) {
+    alert("You win!");
+} else if(userInput === 3 && computerInput === 1) {
+    alert("You lose!");
+} else if(userInput === 3 && computerInput === 2) {
     alert("You win!");
 } else if(userInput === computerInput) {
     alert("It's a draw.");
