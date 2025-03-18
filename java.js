@@ -36,7 +36,7 @@ if (userInput === 1 && computerInput === 2) {
 } else if(userInput === 2 && computerInput === 3) {
     alert("You lose!");
 } else if(userInput === 2 && computerInput === 1) {
-    alert("You win");
+    alert("You win!");
 } else if(userInput === computerInput) {
     alert("It's a draw.");
 } else {
