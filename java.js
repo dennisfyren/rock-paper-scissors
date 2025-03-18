@@ -1,6 +1,10 @@
-let userInput = prompt("Rock, paper or scissors?");
+let repeatedTimes = 0;
+computerWin = 0;
+userWin = 0;
 
-userInput = userInput.toLowerCase();
+function playRound() {
+    let userInput = prompt("Rock, paper or scissors?");
+    userInput = userInput.toLowerCase();
 
 if (userInput === "rock"){
     userInput = 1;
@@ -31,20 +35,35 @@ if (computerInput <= 33) {
 
 if (userInput === 1 && computerInput === 2) {
     alert("You lose!");
+    computerWin += 1;
 } else if(userInput === 1 && computerInput === 3) {
     alert("You win!");
+    userWin += 1;
 } else if(userInput === 2 && computerInput === 3) {
     alert("You lose!");
+    computerWin += 1;
 } else if(userInput === 2 && computerInput === 1) {
     alert("You win!");
+    userWin += 1;
 } else if(userInput === 3 && computerInput === 1) {
     alert("You lose!");
+    computerWin += 1;
 } else if(userInput === 3 && computerInput === 2) {
     alert("You win!");
+    userWin += 1;
 } else if(userInput === computerInput) {
     alert("It's a draw.");
-} else {
-    location.reload();
-}
+};
+    repeatedTimes += 1;
+    console.log("Rounds played: " + repeatedTimes);
+    console.log("Your score: " + userWin);
+    console.log("Computer score: " + computerWin);
+};
+console.log(repeatedTimes);
 
-location.reload();
+function playGame() {
+    repeatedTimes += 1;
+    if (repeatedTimes < 5){
+        playRound();
+    };
+};
