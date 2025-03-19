@@ -7,3 +7,4 @@ Rock paper scissor project.
 3. Assign random number to rock paper or scissor.
 4. Compare userinput to see if they win.
 5. Announce result.
+6. Add game count to 5. Save value between rounds.

@@ -3,6 +3,7 @@ computerWin = 0;
 userWin = 0;
 
 function playRound() {
+    
     let userInput = prompt("Rock, paper or scissors?");
     userInput = userInput.toLowerCase();
 
@@ -34,25 +35,25 @@ if (computerInput <= 33) {
 };
 
 if (userInput === 1 && computerInput === 2) {
-    alert("You lose!");
+    alert("Computer chose paper. You lose!");
     computerWin += 1;
 } else if(userInput === 1 && computerInput === 3) {
-    alert("You win!");
+    alert("Computer chose scissors. You win!");
     userWin += 1;
 } else if(userInput === 2 && computerInput === 3) {
-    alert("You lose!");
+    alert("Computer chose scissors. You lose!");
     computerWin += 1;
 } else if(userInput === 2 && computerInput === 1) {
-    alert("You win!");
+    alert("Computer chose rock. You win!");
     userWin += 1;
 } else if(userInput === 3 && computerInput === 1) {
-    alert("You lose!");
+    alert("Computer chose rock. You lose!");
     computerWin += 1;
 } else if(userInput === 3 && computerInput === 2) {
-    alert("You win!");
+    alert("Computer chose paper. You win!");
     userWin += 1;
 } else if(userInput === computerInput) {
-    alert("It's a draw.");
+    alert("Computer chose the same. It's a draw.");
 };
     repeatedTimes += 1;
     console.log("Rounds played: " + repeatedTimes);
@@ -60,17 +61,34 @@ if (userInput === 1 && computerInput === 2) {
     console.log("Computer score: " + computerWin);
     alert("Your score: " + userWin + " Computer score: " + computerWin);
 };
-console.log(repeatedTimes);
 
 function playGame() {
     for (i = 0; i < 5; i++) {
         playRound();
+        if (computerWin === 3) {
+            alert("You lost the game.");
+            computerWin = 0;
+            userWin = 0;
+            return;
+        } else if (userWin === 3) {
+            alert("You won the game!");
+            computerWin = 0;
+            userWin = 0;
+            return;
+        };
     }
+    if (userWin > computerWin) {
+            alert("You won the game!");
+            computerWin = 0;
+            userWin = 0;
+        } else if (userWin < computerWin) {
+            alert("You lost the game.")
+            computerWin = 0;
+            userWin = 0;
+        } else if (userWin === computerWin && repeatedTimes != 0) {
+            alert("The game ended in a draw.")
+            computerWin = 0;
+            userWin = 0;
+        };
 };
-if (userWin > computerWin) {
-    alert("You won the game!");
-} else if (userWin < computerWin) {
-    alert("You lost the game.")
-} else if (userWin === computerWin) {
-    alert("The game ended in a draw.")
-};
+
