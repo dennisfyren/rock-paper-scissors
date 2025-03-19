@@ -16,8 +16,8 @@ if (userInput === "rock"){
     userInput = 3;
     console.log("You chose Scissors")
 } else {
-    console.log("Invalid choice, try again!");
-    alert("Invalid choice!")
+    alert("Invalid choice, computer win.");
+    computerWin += 1;
 };
 
 let computerInput = Math.floor(Math.random() * 100);
@@ -58,12 +58,19 @@ if (userInput === 1 && computerInput === 2) {
     console.log("Rounds played: " + repeatedTimes);
     console.log("Your score: " + userWin);
     console.log("Computer score: " + computerWin);
+    alert("Your score: " + userWin + " Computer score: " + computerWin);
 };
 console.log(repeatedTimes);
 
 function playGame() {
-    repeatedTimes += 1;
-    if (repeatedTimes < 5){
+    for (i = 0; i < 5; i++) {
         playRound();
-    };
+    }
+};
+if (userWin > computerWin) {
+    alert("You won the game!");
+} else if (userWin < computerWin) {
+    alert("You lost the game.")
+} else if (userWin === computerWin) {
+    alert("The game ended in a draw.")
 };
