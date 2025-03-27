@@ -4,9 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Open console to play</title>
+    <style>
+        
+    </style>
 </head>
-<body style="background: rgb(51, 51, 51);">
-    <button type="button" onclick="playGame();" style="margin-left: 45%; margin-top: 5%; font-size: larger; font-weight: 900;">Play game!</button>
-    <script src="java.js"></script>
+<body>
+   <div id="content">
+        <div id="playArea">
+            <button id="rock">Rock</button>
+            <button id="paper">Paper</button>
+            <button id="scissors">Scissors</button>
+            <button id="reset" style="margin-left: 20px;">Reset</button>
+        </div>
+        <div id="result">
+
+        </div>
+        <h3 id="tracker"></h3>
+    </div>
+    
+    <script src="java.js" defer></script>
 </body>
 </html>
